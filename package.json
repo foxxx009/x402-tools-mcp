@@ -1,0 +1,35 @@
+{
+  "name": "x402-tools-mcp",
+  "version": "1.0.0",
+  "description": "MCP server exposing six pay-per-call research/data tools. Pays automatically over x402 (USDC on Base) with no API keys and no subscriptions.",
+  "type": "module",
+  "bin": {
+    "x402-tools-mcp": "index.js"
+  },
+  "main": "index.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "index.js",
+    "README.md"
+  ],
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "x402",
+    "usdc",
+    "base",
+    "pay-per-call",
+    "web-fetch",
+    "domain-intel",
+    "github",
+    "agent"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "viem": "^2.21.0",
+    "x402": "^1.2.0"
+  },
+  "license": "MIT"
+}
