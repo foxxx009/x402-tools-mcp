@@ -81,6 +81,21 @@ Signing is local; settlement happens on Base.
 - `repo_diligence` and `web_brief` are priced higher because they do real
   multi-request work. Call them deliberately.
 
+## Remote MCP (zero install)
+
+Prefer not to run anything locally? The same service is exposed as a remote
+Streamable HTTP MCP endpoint:
+
+```
+https://fitze-x402-seller.app.workbuddy.host/mcp
+```
+
+Add it to any MCP client (Claude Desktop, Cursor, etc.) as a remote server
+URL. `free_url_check` runs without payment; paid tools answer HTTP 402 with
+x402 payment requirements and settle in USDC on Base when an x402-capable
+client retries. Listed in the official MCP Registry as
+`io.github.foxxx009/x402-tools-mcp`.
+
 ## Licence
 
 MIT
