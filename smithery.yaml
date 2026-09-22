@@ -1,0 +1,17 @@
+# Smithery metadata for x402-tools-mcp
+name: x402-tools-mcp
+display_name: x402 Tools
+description: Six pay-per-call research and data tools for AI agents — web fetch, domain intel, GitHub repo facts, token intel, repo diligence, multi-URL briefs. Calls are paid automatically in USDC on Base via the x402 protocol; no API keys and no subscriptions.
+categories:
+  - tools
+  - web
+  - data
+keywords:
+  - x402
+  - usdc
+  - base
+  - pay-per-call
+  - web-fetch
+  - research
+license: MIT
+repository: https://github.com/foxxx009/x402-tools-mcp
