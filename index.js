@@ -139,6 +139,21 @@ const TOOLS = [
       required: ['urls'],
     },
   },
+  {
+    name: 'free_url_check',
+    price: 'FREE',
+    description:
+      'Check whether a public URL is reachable and what it is: HTTP status, ' +
+      'final URL after redirects, content type and page title. Free, no ' +
+      'payment. Use web_fetch for full text and links.',
+    schema: {
+      type: 'object',
+      properties: {
+        url: { type: 'string', description: 'Absolute http(s) URL to check.' },
+      },
+      required: ['url'],
+    },
+  },
 ];
 
 // ---------------------------------------------------------------------------
@@ -244,6 +259,16 @@ server.setRequestHandler(CallToolRequestSchema, async (req) => {
   }
 
   try {
+    // Free tool: no wallet, no signature — direct GET to the seller.
+    if (tool.price === 'FREE') {
+      const q = encodeURIComponent(JSON.stringify(req.params.arguments || {}));
+      const r = await fetch(`${BASE_URL}/tools/free_url_check?q=${q}`);
+      const text = await r.text();
+      return {
+        content: [{ type: 'text', text: r.status === 200 ? JSON.stringify(safeJson(text), null, 2) : `HTTP ${r.status}:\n` + text }],
+        isError: r.status !== 200,
+      };
+    }
     const { status, body, paid } = await paidCall(name, req.params.arguments);
     const text =
       status === 200
