@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
   "name": "io.github.foxxx009/x402-tools-mcp",
   "title": "x402 Tools",
-  "description": "Six pay-per-call research tools for AI agents, paid via x402 USDC on Base.",
-  "version": "1.0.0",
+  "description": "Pay-per-call research tools for AI agents, paid via x402 USDC. Remote MCP, one free tool.",
+  "version": "1.1.0",
   "homepage": "https://github.com/foxxx009/x402-tools-mcp",
   "repository": {
     "url": "https://github.com/foxxx009/x402-tools-mcp",
@@ -23,7 +23,10 @@
     "research",
     "agent-tools"
   ],
-  "transport": {
-    "type": "stdio"
-  }
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://fitze-x402-seller.app.workbuddy.host/mcp"
+    }
+  ]
 }
