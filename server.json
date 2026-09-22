@@ -1,0 +1,29 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
+  "name": "io.github.foxxx009/x402-tools-mcp",
+  "title": "x402 Tools",
+  "description": "Six pay-per-call research tools for AI agents, paid via x402 USDC on Base.",
+  "version": "1.0.0",
+  "homepage": "https://github.com/foxxx009/x402-tools-mcp",
+  "repository": {
+    "url": "https://github.com/foxxx009/x402-tools-mcp",
+    "source": "github"
+  },
+  "license": "MIT",
+  "authors": [
+    { "name": "foxxx009" }
+  ],
+  "keywords": [
+    "x402",
+    "usdc",
+    "base",
+    "payments",
+    "pay-per-call",
+    "web-fetch",
+    "research",
+    "agent-tools"
+  ],
+  "transport": {
+    "type": "stdio"
+  }
+}
