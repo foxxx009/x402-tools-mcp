@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "x402-tools-mcp": {
+      "command": "npx",
+      "args": ["-y", "github:foxxx009/x402-tools-mcp"],
+      "env": {
+        "X402_PRIVATE_KEY": "0x..."
+      }
+    }
+  }
+}
